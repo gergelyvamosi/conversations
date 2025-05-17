@@ -53,7 +53,7 @@ Server Spring Boot version 3.2.3
 
 ## KNOWN bugs
 
-* data refresh (lists) goes on client side not all the time. the implementation of the functionality the original specification is at 97%.
+* data refresh (lists) goes on client side not all the time - mostly on second click works :). the implementation of the functionality the original specification is at 97%. completion is at almost 100%. some bugs still in.
 * cookie JSESSIONID gets stuck on tomcat - no logout implemented - clear cookies in browser if use a different user : !! UPDATE 2025-05-17 19:30 logout() added !!
 
 
