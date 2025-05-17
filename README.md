@@ -1,6 +1,10 @@
 # A Spring Boot web application that facilitates 1on1 discussions between two employees.
 
-2025-05-17
+2025-05-17 approx 14h
+
+Client in Angular version 19.2.12 build with npm 10.9.2 and node-v22.15.0-linux-x64
+
+Server Spring Boot version 3.2.3
 
 ## Cheers Fellows,
 
@@ -53,7 +57,7 @@
 * cookie JSESSIONID gets stuck on tomcat - no logout implemented - clear cookies in browser if use a different user : !! UPDATE 2025-05-17 19:30 logout() added !!
 
 
-## to complete the task was totally 4 days 32hrs,
+## to complete the task was totally 4 days 33hrs,
 
 * 1st day considerations / concept of the development 4 hrs,
 
@@ -61,4 +65,4 @@
 
 * 3rd day implementation Angular 19 client 11hrs
 
-* 4th day implementation Angular 19 client, misc, debug, fine tune 7hrs
+* 4th day implementation Angular 19 client, misc, debug, fine tune 7hrs + 1hr logout
