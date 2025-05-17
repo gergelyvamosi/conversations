@@ -5,6 +5,14 @@
 
 ## to run:
 
+0) install/use a mysql server and create user and credentials (user/pass = conference_management/conference_management1)
+
+  CREATE USER 'conference_management'@'localhost' IDENTIFIED BY 'conference_management1';
+
+  GRANT ALL ON conference_management.* TO 'conference_management'@'localhost';
+
+  FLUSH PRIVILEGES;
+
 1) checkout github repo in a local folder
 
 2) to build:
@@ -39,7 +47,8 @@
 
 ## KNOWN bugs
 
-  data refresh (lists) goes on client side not all the time. the implementation of the functionality the original specification is at 97%.
+* data refresh (lists) goes on client side not all the time. the implementation of the functionality the original specification is at 97%.
+* cookie JSESSIONID gets stuck on tomcat - no logout implemented - clear cookies in browser if use a different user
 
 
 ## to complete the task was totally 4 days 32hrs,
