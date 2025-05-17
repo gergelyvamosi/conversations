@@ -1,9 +1,9 @@
-A Spring Boot web application that facilitates 1on1 discussions between two employees.
+#A Spring Boot web application that facilitates 1on1 discussions between two employees.
 
-Cheers Fellows,
+##Cheers Fellows,
 
 
-to run:
+##to run:
 
 1) checkout github repo in a local folder
 
@@ -18,7 +18,7 @@ to run:
   $JAVA_HOME/bin/java -jar target/conference_management-0.0.1-SNAPSHOT.jar
 
 
-to test from cmd line (e.g.):
+##to test from cmd line (e.g.):
 
   curl --header "X-Authenticated-User: root" http://localhost:8080/users
 
@@ -29,20 +29,20 @@ to test from cmd line (e.g.):
   curl --header "X-Authenticated-User: root" -X POST -H "Content-Type: application/json" -d '{"title":"a"}' http://localhost:8080/conversations/filter
 
 
-to use the webapp from browser:
+##to use the webapp from browser:
 
   http://localhost:8080/index.html
 
-you can also test with two different users in a firefox and a chrome browser on one machine. just chat 1on1s on one computer.
+##you can also test with two different users in a firefox and a chrome browser on one machine. just chat 1on1s on one computer.
 
 
 
-KNOWN bugs
+##KNOWN bugs
 
   data refresh (lists) goes on client side not all the time. the implementation of the functionality the original specification is at 97%.
 
 
-to complete the task was totally 4 days 32hrs,
+##to complete the task was totally 4 days 32hrs,
 
   1st day considerations / concept of the development 4 hrs,
 
