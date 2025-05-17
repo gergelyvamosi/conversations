@@ -87,9 +87,9 @@ export class ConferenceManagementComponent implements OnInit {
       this.authService
         .post<Conference>(this.authService.HTTP_URL + '/conferences/wrapper', JSON.stringify(this.newConference))
         .subscribe(() => {
-          this.loadConferences();
           this.newConference = { id: 0, title: '', users: [], plannedDate: '', description: '', location: '' };
         });
+        this.loadConferences();
     }
   }
 
@@ -107,20 +107,20 @@ export class ConferenceManagementComponent implements OnInit {
       this.authService
         .put<Conference>(`${this.authService.HTTP_URL}/conferences/wrapper/${this.selectedConferenceToModifyId}`, JSON.stringify(this.modifiedConference))
         .subscribe(() => {
-          this.loadConferences();
           this.modifiedConference = { id: 0, title: '', users: [], plannedDate: '', description: '', location: '' };
           this.selectedConferenceToModifyId = null;
         });
+        this.loadConferences();
     }
   }
 
   deleteConference() {
     if (this.selectedConferenceToModifyId) {
       this.authService.delete<void>(`${this.authService.HTTP_URL}/conferences/${this.selectedConferenceToModifyId}`).subscribe(() => {
-        this.loadConferences();
         this.selectedConferenceToModifyId = null;
         this.modifiedConference = { id: 0, title: '', users: [], plannedDate: '', description: '', location: '' };
       });
+      this.loadConferences();
     }
   }
 
