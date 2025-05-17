@@ -18,7 +18,7 @@ to test from cmd line (e.g.):
   curl --header "X-Authenticated-User: root" http://localhost:8080/users
   curl --header "X-Authenticated-User: root" -X POST -H "Content-Type: text/plain" -d '' http://localhost:8080/conferences/add/1/users/2
   curl --header "X-Authenticated-User: root" -X GET -H "Content-Type: application/json" http://localhost:8080/conversations/filter?title=a
-#  curl --header "X-Authenticated-User: root" -X POST -H "Content-Type: application/json" -d '{"title":"a"}' http://localhost:8080/conversations/filter
+  curl --header "X-Authenticated-User: root" -X POST -H "Content-Type: application/json" -d '{"title":"a"}' http://localhost:8080/conversations/filter
 
 to use the webapp from browser:
 
@@ -30,7 +30,7 @@ you can also test with two different users in a firefox and a chrome browser on 
 KNOWN bugs
 
   data refresh (lists) goes on client side not all the time. the implementation of the functionality the original specification is at 97%.
-  
+
 
 to complete the task was totally 4 days 32hrs,
   1st day considerations / concept of the development 4 hrs,
