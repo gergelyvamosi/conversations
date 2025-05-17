@@ -144,8 +144,8 @@ export class ConversationListComponent implements OnInit, OnDestroy {
 
   deleteConversation(id: number) {
     this.authService.delete<void>(this.authService.HTTP_URL + `/conversations/${id}`).subscribe(() => {
-      this.loadConversations();
     });
+    this.loadConversations();
   }
 
   updateConversation(id: number) {
@@ -155,10 +155,10 @@ export class ConversationListComponent implements OnInit, OnDestroy {
         text: this.conversationTexts[id],
       }))
       .subscribe(() => {
-        this.loadConversations();
         delete this.conversationTexts[id];
       });
     }
+    this.loadConversations();
   }
 
   addConversation() {
@@ -176,7 +176,8 @@ export class ConversationListComponent implements OnInit, OnDestroy {
         //this.newConversationText = '';
         //this.selectedUserToAddConversationIdB = null;
       });
-      this.authService.notifyLogin();
+      //this.authService.notifyLogin();
+      this.loadConversations();
     }
   }
 
@@ -185,8 +186,8 @@ export class ConversationListComponent implements OnInit, OnDestroy {
       this.authService
         .put<void>(`${this.authService.HTTP_URL}/conversations/archive/${this.dataService.selectedConference()!.id}`, {})
         .subscribe(() => {
-          this.loadConversations();
         });
+        this.loadConversations();
     }
   }
 
