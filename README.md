@@ -31,7 +31,7 @@
 
 ## to use the webapp from browser:
 
-  http://localhost:8080/index.html
+  http://localhost:8080/
 
   you can also test with two different users in a firefox and a chrome browser on one machine. just chat 1on1s on one computer.
 
