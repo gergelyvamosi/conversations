@@ -11,8 +11,8 @@ import { AuthService } from './auth.service';
   template: `
     <div style="width: 90%; height: 150px; top: 0; left: 0; border: 1px solid #ccc; padding: 10px;">
       <h2>Login</h2>
-      <input type="text" [(ngModel)]="username" placeholder="Username" /><label for="username">Admin user is root, enter a valid username.</label><br />
-      <button (click)="login()">Login</button>
+      <input type="text" [(ngModel)]="username" placeholder="Username" (keydown.enter)="login()" #nameInput/><label for="username">Admin user is root, enter a valid username.</label><br />
+      <button (click)="login()">Login</button><button (click)="logout(nameInput)">Logout</button>
       <p>X-AUTHENTICATED-USER setted to: {{ authService.getAuthenticatedUser() }}</p>
     </div>
   `,
@@ -20,7 +20,7 @@ import { AuthService } from './auth.service';
   imports: [FormsModule],
 })
 export class LoginComponent implements OnInit {
-  username = '';
+  username: string = '';
 
   constructor(public authService: AuthService) {}
 
@@ -31,5 +31,16 @@ export class LoginComponent implements OnInit {
   login() {
     this.authService.setAuthenticatedUser(this.username);
     this.authService.notifyLogin(); // Notify other components
+  }
+
+  logout(nameInput: HTMLInputElement) {
+    this.authService.post<String>(this.authService.HTTP_URL + '/logout', '').subscribe(() => {
+      // do nothing theoretically :)
+    });
+    this.username = '';
+    this.authService.setAuthenticatedUser(this.username);
+    //this.authService.notifyLogin();
+    nameInput.value = '';
+    window.location.reload();
   }
 }

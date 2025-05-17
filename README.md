@@ -1,5 +1,7 @@
 # A Spring Boot web application that facilitates 1on1 discussions between two employees.
 
+2025-05-17
+
 ## Cheers Fellows,
 
 
@@ -48,7 +50,7 @@
 ## KNOWN bugs
 
 * data refresh (lists) goes on client side not all the time. the implementation of the functionality the original specification is at 97%.
-* cookie JSESSIONID gets stuck on tomcat - no logout implemented - clear cookies in browser if use a different user
+* cookie JSESSIONID gets stuck on tomcat - no logout implemented - clear cookies in browser if use a different user : !! UPDATE 2025-05-17 19:30 logout() added !!
 
 
 ## to complete the task was totally 4 days 32hrs,
