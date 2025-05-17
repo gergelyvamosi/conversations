@@ -44,10 +44,10 @@
 
 ## to complete the task was totally 4 days 32hrs,
 
-  1st day considerations / concept of the development 4 hrs,
+* 1st day considerations / concept of the development 4 hrs,
 
-  2nd day implementation spring boot JAVA 17 / business layer / mysql db 10 hrs,
+* 2nd day implementation spring boot JAVA 17 / business layer / mysql db 10 hrs,
 
-  3rd day implementation Angular 19 client 11hrs
+* 3rd day implementation Angular 19 client 11hrs
 
-  4th day implementation Angular 19 client, misc, debug, fine tune 7hrs
+* 4th day implementation Angular 19 client, misc, debug, fine tune 7hrs
