@@ -12,3 +12,7 @@ git commit -m "initial revision"
 git checkout -b main
 
 git push main main
+
+git remote add main1 git@github.com:gergelyvamosi/conversations
+
+
