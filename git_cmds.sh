@@ -13,6 +13,10 @@ git checkout -b main
 
 git push main main
 
+# own repo
 git remote add main1 git@github.com:gergelyvamosi/conversations
 
+git pull main1 main
+
+git push main1 main
 
